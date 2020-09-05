@@ -1,0 +1,4 @@
+The ```octobercms``` had a Username Enumeration vulnerability. Username enumeration is possible at the login page of octobercms login page. This was due to the error message it showed while giving wrong credentials.
+However the login was in the repo (https://github.com/octobercms/october), but the error message was in a completely different repo (https://github.com/octobercms/library). 
+While installing ```octobercms``` from the ```install master``` all the repos in the octobercms (https://github.com/octobercms) is combined to form the entire ```octobercms``` system. That is why the error message was not available in the october repo. 
+Please find the fix in the ```username-enum-fix``` branch of my fork of the repository. (https://github.com/d3m0n-r00t/library/blob/username-enum-fix/src/Auth/Manager.php)
